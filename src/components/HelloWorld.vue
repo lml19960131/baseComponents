@@ -17,15 +17,46 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <radio :selections="districts"></radio>
   </div>
 </template>
 
 <script>
+  import Radio from '../components/base/riado.vue'
 export default {
   name: 'HelloWorld',
+  components:{
+    radio:Radio
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      districts: [
+        {
+          label: '北京',
+          value: 0
+        },
+        {
+          label: '上海',
+          value: 1
+        },
+        {
+          label: '广州',
+          value: 2
+        },
+        {
+          label: '天津',
+          value: 3
+        },
+        {
+          label: '武汉',
+          value: 4
+        },
+        {
+          label: '重庆',
+          value: 5
+        },
+      ]
     }
   }
 }
